@@ -241,7 +241,8 @@ STICKY_OTHER_WRITABLE 48;5;235;38;5;139;3
 # java {{{2
 .coffee               38;5;074;1
 .java                 38;5;074;1
-.js                   38;5;074;1
+# JavaScript deserves a special color :P
+.js                   38;5;197;1
 .jsm                  38;5;074;1
 .jsm                  38;5;074;1
 .jsp                  38;5;074;1
