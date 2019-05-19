@@ -75,24 +75,39 @@
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-source .extra
-
 # z beats cd most of the time. `brew install z`
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
 [ -s $zpath ] && source $zpath
+# . /usr/local/etc/profile.d/z.sh
 
 autoload -U promptinit; promptinit
 prompt pure
 
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# TODO: Missing history here!!
+# TODO: Use a variable taking into account where this was installed instead of a hardcoded path
+# Add greyed out autosugestions.
+# source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Control + Space will execute the give autosugestion.
 bindkey '^ ' autosuggest-execute
+
+# Highlight know commands
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# Set personal aliases, overriding those provided by oh-my-zsh libs,
-# plugins, and themes. Aliases can be placed here, though oh-my-zsh
-# users are encouraged to define aliases within the ZSH_CUSTOM folder.
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+# Load our dotfiles like ~/.bash_prompt, etc…
+#   ~/.extra can be used for settings you don’t want to commit,
+#   Use it to configure your PATH, thus it being first in line.
+# for file in ~/.{extra,bash_prompt,exports,aliases,functions}; do
+# for file in ~/.{exports}; do
+#     [ -r "$file" ] && source "$file"
+# done
+# unset file
+
+# Setup default editor, colors, language, etc.
+source ~/.exports
+# The good stuff for navigating dirs, listing with colors and git.
+source ~/.alias
+# source .extra
+# Enable history across terminals and sessions.
+# TODO: fix this as it's creating recurisve symlinks
+# source ~/.zsh/history.zsh
