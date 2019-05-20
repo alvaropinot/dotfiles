@@ -75,6 +75,14 @@
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
+# Allow completitions for git or anything install through brew
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh/site-functions:$FPATH
+fi
+
+autoload -Uz compinit
+compinit
+
 # z beats cd most of the time. `brew install z`
 zpath="$(brew --prefix)/etc/profile.d/z.sh"
 [ -s $zpath ] && source $zpath
