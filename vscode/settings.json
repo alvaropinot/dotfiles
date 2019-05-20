@@ -1,13 +1,10 @@
 {
-  "[javascript]": {},
-  "window.zoomLevel": 0,
-  "workbench.startupEditor": "newUntitledFile",
-  "prettier.semi": false,
-  "prettier.singleQuote": true,
-  "prettier.trailingComma": "all",
-  "telemetry.enableCrashReporter": false,
-  "telemetry.enableTelemetry": false,
-  "workbench.statusBar.feedback.visible": false,
-  "editor.tabSize": 2,
-  "workbench.colorTheme": "Dracula"
+    "editor.formatOnSave": true,
+    "prettier.semi": false,
+    "prettier.singleQuote": true,
+    "prettier.trailingComma": "all",
+    "editor.tabSize": 2,
+    "workbench.colorTheme": "Dracula",
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true
 }
