@@ -13,3 +13,5 @@ alias cd..='cd ..' #typos
 alias g='git'
 # I commit this mistake to often.
 alias gi='git'
+# Decortate git with hub to have pr, fork, issue...
+eval "$(hub alias -s)"
