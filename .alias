@@ -13,5 +13,7 @@ alias cd..='cd ..' #typos
 alias g='git'
 # I commit this mistake to often.
 alias gi='git'
+# I do `git status` as much as `ls` and that's a lot 😅.
+alias gs='git status'
 # Decortate git with hub to have pr, fork, issue...
 eval "$(hub alias -s)"
